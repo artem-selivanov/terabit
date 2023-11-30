@@ -1,6 +1,6 @@
 const path = require('path');
 //console.log(path.join(process.cwd(), `.env`))
-const path2 = process.cwd().indexOf("/home/terabit") > -1 ? "/home/terabit/terabit" : "D:\\OpenServer\\domains\\terabit"
+const path2 = process.cwd().indexOf("/home/artem") > -1 ? "/home/artem/terabit" : "D:\\OpenServer\\domains\\terabit"
 require('dotenv').config({path: path.join(path2, `.env`)});
 
 const horo_auth = {
