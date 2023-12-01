@@ -1,6 +1,6 @@
 const path = require('path');
 //console.log(path.join(process.cwd(), `.env`))
-const path2 = process.cwd().indexOf("/home") > -1 ? "/home/terabit" : "D:\\OpenServer\\domains\\terabit"
+const path2 = process.cwd().indexOf("/home/ubuntu") > -1 ? "/home/ubuntu/terabit" : "D:\\OpenServer\\domains\\terabit"
 
 require('dotenv').config({path: path.join(path2, `.env`)});
 
