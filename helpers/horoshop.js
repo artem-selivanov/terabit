@@ -29,7 +29,7 @@ class horoshopClass {
 //                console.log(getdata);
 //                console.log(getdata.response.token);
                 this.token = getdata.response.token;
-                console.log(this.token)
+                //console.log(this.token)
             })
             .catch(error => {
                 console.error(error);

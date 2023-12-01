@@ -8,9 +8,9 @@ async function getYml(url) {
 
 
     const offers = xmlresult.yml_catalog.shop[0].offers[0].offer
-    //console.log(offers.filter(i=>i['$'].available == 'true').length)
-    //console.log(offers.filter(i=>i['$'].available != 'true').length)
-    //console.log(offers.filter(i=>i['$'].available != 'true'))
+    console.log(`Items in the stock: ${offers.filter(i=>i['$'].available == 'true').length}`)
+    console.log(`Items not in the stock: ${offers.filter(i=>i['$'].available != 'true').length}`)
+
     offers.map(i=>(obj[i['$'].id.toString()]={price:Math.ceil(i.price[0]), stock:i['$'].available == 'true'}))
     return obj
 }

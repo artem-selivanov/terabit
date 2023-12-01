@@ -52,7 +52,10 @@ const validCats = ['Аудіо',
     'Аксесуари до телевізорів'
 ]
 
-module.exports = {horo_auth, dclink, validCats}
+const url = process.env.LINK;
+
+
+module.exports = {horo_auth, dclink, validCats, url}
 
 /*
 Kirilluammm@gmail.com
