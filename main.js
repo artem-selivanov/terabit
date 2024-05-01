@@ -18,10 +18,13 @@ const h = new horoshopClass(horo_auth);
         if (result == null) break;
         start += 500
         console.log(`Horoshop send ${result.length} products`)
-        for (let {article, price, presence, parent} of result) {
-            if (!parent.value||parent.value.split("/").filter(i => (validCats.indexOf(i) > -1)).length == 0) continue
+        for (let {article, price, presence, parent, name} of result) {
+            // if (!parent.value||parent.value.split("/").filter(i => (validCats.indexOf(i) > -1)).length == 0) continue
+            if (!parent.value) continue
             const stock = presence.id == 1
+
             const dcitem = dclink[article]
+            //console.log(dcitem)
             if (!dcitem && stock) update.push({article, presence:"Немає в наявності"})
             if (!dcitem || (dcitem.price == price && dcitem.stock == stock)) continue
             update.push({article, price: dcitem.price, presence: dcitem.stock ? "В наявності" : "Немає в наявності"})
